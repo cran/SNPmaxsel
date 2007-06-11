@@ -28,14 +28,14 @@ maxsel.asymp.test<-function(x1,x2=NULL,y,type)
 
 maxselcrit<-maxsel(x1=x1,x2=x2,y=y,type=type)
 
-if (is.null(x2)&is.element(type,c("inter.ord","inter.cat")) )
+if (is.null(x2)&is.element(type,c("inter.ord","inter.cat","inter.ord.main")) )
  {
- stop("if x2 is null, type can not be inter.ord or inter.cat")
+ stop("if x2 is null, type can not be inter.ord, inter.cat or main")
  }
 
-if (!is.null(x2)&!is.element(type,c("inter.ord","inter.cat")) )
+if (!is.null(x2)&!is.element(type,c("inter.ord","inter.cat","inter.ord.main")) )
  {
- stop("if x2 is not null, type must be inter.ord or inter.cat")
+ stop("if x2 is not null, type must be inter.ord, inter.cat or main")
  }
 
 if (!is.null(x2))
@@ -53,7 +53,7 @@ y<-dat[,2]
 x<-dat[,1]
 n<-length(x)
             
-if (is.element(type,c("inter.ord","inter.cat")))
+if (is.element(type,c("inter.ord","inter.cat","inter.ord.main")))
  {
  K<-9
  }

@@ -25,13 +25,11 @@
 Fasymp<-function(t,a.vec,type=NULL,groups=NULL)
 {
 K<-length(a.vec)
-if (sum(a.vec)!=1)
- stop("sum(a.vec) must be one.")
 
 if (t<0)
  stop("t must be positive")
 
-if (sum(a.vec)!=1)
+if (round(sum(a.vec),8) != 1)
  stop("a.vec must sum to 1")
 
 if (any(a.vec<0))
@@ -45,16 +43,16 @@ if (!is.null(type)&!is.null(groups))
 
 if (is.null(groups))
  {
- if (!is.element(type,c("all.pairs","all.partitions","inter.ord","inter.cat","ord")))
+ if (!is.element(type,c("all.pairs","all.partitions","inter.ord","inter.cat","ord","inter.ord.main")))
   {
-  stop("type must be all.pairs, all.partitions, ord, inter.ord or inter.cat")
+  stop("type must be all.pairs, all.partitions, ord, inter.ord, inter.cat or main")
   } 
  groups<-groups(K=K,a.vec=a.vec,type=type)
  }     
 
 if (!is.null(type))
  {
-if (length(a.vec)!=9 && is.element(type,c("inter.ord","inter.cat")))
+if (length(a.vec)!=9 && is.element(type,c("inter.ord","inter.cat","inter.ord.main")))
  stop("for type inter.ord and inter.cat, a.vec must be of length 9")
  }
    
@@ -194,6 +192,30 @@ if (type=="inter.cat")
  groups[[25]]<-list(group1=c(6),group2=setdiff(1:9,c(6)))
  }
 
+if (type=="inter.ord.main")
+ {
+ groups<-list()
+ groups[[1]]<-list(group1=1,group2=setdiff(1:9,1))
+ groups[[2]]<-list(group1=c(1,2),group2=setdiff(1:9,1:2))
+ groups[[3]]<-list(group1=3,group2=setdiff(1:9,3))
+ groups[[4]]<-list(group1=c(2,3),group2=setdiff(1:9,2:3))
+ groups[[5]]<-list(group1=7,group2=setdiff(1:9,7))
+ groups[[6]]<-list(group1=c(7,8),group2=setdiff(1:9,7:8))
+ groups[[7]]<-list(group1=9,group2=setdiff(1:9,9))
+ groups[[8]]<-list(group1=c(8,9),group2=setdiff(1:9,8:9))
+ groups[[9]]<-list(group1=3,group2=setdiff(1:9,3))
+ groups[[10]]<-list(group1=c(3,6),group2=setdiff(1:9,c(3,6)))
+ groups[[11]]<-list(group1=c(1,4,2,5),group2=setdiff(1:9,c(1,4,2,5)))
+ groups[[12]]<-list(group1=c(2,5,3,6),group2=setdiff(1:9,c(2,5,3,6)))
+ groups[[13]]<-list(group1=c(4,7),group2=setdiff(1:9,c(4,7)))
+ groups[[14]]<-list(group1=c(6,9),group2=setdiff(1:9,c(6,9)))
+ groups[[15]]<-list(group1=c(4,7,5,8),group2=setdiff(1:9,c(4,7,5,8)))
+ groups[[16]]<-list(group1=c(5,8,6,9),group2=setdiff(1:9,c(5,8,6,9)))
+ groups[[17]]<-list(group1=c(1:3),group2=c(4:9))
+ groups[[18]]<-list(group1=c(1:6),group2=c(7:9))
+ groups[[19]]<-list(group1=c(1,4,7),group2=c(2,3,5,6,8,9))
+ groups[[20]]<-list(group1=c(3,6,9),group2=c(1,2,4,5,7,8))
+ }
 
 m<-length(groups)
 if (m==1)

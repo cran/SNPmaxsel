@@ -31,8 +31,7 @@ x2=3.
 
 \references{
 Boulesteix AL, Strobl C, Weidinger S, Wichmann HE, Wagenpfeil S, 2007.
-Multiple testing for SNP-SNP interactions: a flexible asymptotic
-framework. Submitted.
+Multiple testing for SNP-SNP interactions. Submitted.
 
 }
 
@@ -40,7 +39,7 @@ framework. Submitted.
   Anne-Laure Boulesteix (\url{http://www.slcmsr.net/boulesteix})
 
 }
-\seealso{\code{maxsel},\code{\link{maxsel.asymp.test}}.}
+\seealso{\code{\link{maxsel}},\code{\link{maxsel.asymp.test}}.}
 
 
 \examples{

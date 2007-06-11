@@ -11,7 +11,7 @@ Fasymp(t,a.vec,type=NULL,groups=NULL)
   each category. Its sum must be 1. If \code{type}="inter.ord" or "inter.cat",
   \code{a.vec} must have length 9.}
   \item{type}{must be one of "ordinal", "all.pairs", "all.partitions",
-  "inter.ord", "inter.cat". If \code{type}=\code{NULL}, the chi-square statistics
+  "inter.ord", "inter.cat", "inter.ord.main". If \code{type}=\code{NULL}, the chi-square statistics
   are computed for the groups defined by \code{groups}}
   \item{groups}{If \code{type}=\code{NULL}, the chi-square statistics are computed
   for the groups defined by \code{groups}. \code{groups} must be a list with m
@@ -39,8 +39,7 @@ becomes unstable (or computationally prohibitive) for such a high dimension.
 
 \references{
 Boulesteix AL, Strobl C, Weidinger S, Wichmann HE, Wagenpfeil S, 2007.
-Multiple testing for SNP-SNP interactions: a flexible asymptotic
-framework. Submitted.
+Multiple testing for SNP-SNP interactions. Submitted.
 }
 
 \author{

@@ -29,14 +29,14 @@ maxsel<-function(x1,x2=NULL,y,type="inter.ord")
 if (length(setdiff(y,c(0,1)))>0)
  stop("The entries of y must be 0 or 1")
 
-if (is.null(x2)&is.element(type,c("inter.ord","inter.cat")) )
+if (is.null(x2)&is.element(type,c("inter.ord","inter.cat","inter.ord.main")) )
  {
- stop("if x2 is null, type can not be inter.ord or inter.cat")
+ stop("if x2 is null, type can not be inter.ord, inter.cat or main")
  }
 
-if (!is.null(x2)&!is.element(type,c("inter.ord","inter.cat")) )
+if (!is.null(x2)&!is.element(type,c("inter.ord","inter.cat","inter.ord.main")) )
  {
- stop("if x2 is not null, type must be inter.ord or inter.cat")
+ stop("if x2 is not null, type must be inter.ord, inter.cat or main")
  }
 
 if (!is.null(x2))
@@ -121,6 +121,16 @@ if (type=="inter.cat")
  crit<-as.numeric(sapply(a,FUN=chisq.test.a,x,y,partition=TRUE))  
  maxselcrit<-max(crit)
  }
+
+if (type=="inter.ord.main")
+ {
+ a<-list(x1=1,x2=c(1,2),x3=3,x4=c(2,3),x5=7,x6=c(7,8),x7=c(8,9),x8=9,x9=c(1,2,4,5),
+ x10=c(4,5,7,8),x11=c(5,6,8,9),x12=c(2,3,5,6),x13=c(1,4),x14=c(4,7),x15=c(3,6),
+ x16=c(6,9),x17=1:3,x18=7:9,x19=c(1,4,7),x20=c(3,6,9))
+ crit<-as.numeric(sapply(a,FUN=chisq.test.a,x,y,partition=TRUE))  
+ maxselcrit<-max(crit)
+ }
+
  
 return(maxselcrit)
 
