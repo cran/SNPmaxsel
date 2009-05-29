@@ -39,11 +39,11 @@ becomes unstable (or computationally prohibitive) for such a high dimension.
 
 \references{
 Boulesteix AL, Strobl C, Weidinger S, Wichmann HE, Wagenpfeil S, 2007.
-Multiple testing for SNP-SNP interactions. Submitted.
+Multiple testing for SNP-SNP interactions. Statistical Applications in Genetics and Molecular Biology 6:37.
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.slcmsr.net/boulesteix})
+  Anne-Laure Boulesteix (\url{http://www.ibe.med.uni-muenchen.de/organisation/mitarbeiter/020_professuren/boulesteix/index.html})
 
 }
 \seealso{\code{\link{maxsel.asymp.test}}, \code{\link{maxsel}}.}
@@ -60,8 +60,8 @@ Fasymp(t=2,a.vec=c(0.2,0.1,0.05,0.05,0.6),type="all.partitions")
 Fasymp(t=2,a.vec=c(0.2,0.1,0.1,0.1,0.05,0.05,0.05,0.05,0.3),type="inter.ord")
 Fasymp(t=2,a.vec=c(0.2,0.1,0.1,0.1,0.05,0.05,0.05,0.05,0.3),type="inter.cat")
 
-# Creating a user-defined \code{groups} list 
-# (correponding to \code{type})="ord" with K=5)
+# Creating a user-defined groups list 
+# (correponding to type)="ord" with K=5)
 my.groups<-list(list(group1=1,group2=2:5),list(group1=1:2,group2=3:5),
 list(group1=1:3,group2=4:5),list(group1=1:4,group2=5))
 

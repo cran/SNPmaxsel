@@ -1,0 +1,11 @@
+44abd5948380ff88b728e9d388e40120 *DESCRIPTION
+91e1fb8a5edf1054c7177bd6f82f9311 *NAMESPACE
+abd35d3439bccb7cac6057d0a3eacc3f *R/Fasymp.r
+b9881820c6b23bfc26c42ba9e1eacefa *R/maxsel.asymp.test.r
+257cdeea30a22d3204fc16b2df148e2a *R/maxsel.r
+653c5d6ed2091d8449bb0f7e10e08312 *R/transf.inter.r
+6edd3ccafa7c92da676a29a172e2aa72 *man/Fasymp.rd
+bc27d9c12399cc91e2c2ace984676dcf *man/SNPmaxsel-internal.rd
+fda248ec16c7df659454df434e0cdd5c *man/maxsel.asymp.test.rd
+67c7ae2676de8f838068f18313a36e67 *man/maxsel.rd
+0318ab5685f11a0a35363bd67969c1f1 *man/transf.inter.rd

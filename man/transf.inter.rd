@@ -31,12 +31,12 @@ x2=3.
 
 \references{
 Boulesteix AL, Strobl C, Weidinger S, Wichmann HE, Wagenpfeil S, 2007.
-Multiple testing for SNP-SNP interactions. Submitted.
+Multiple testing for SNP-SNP interactions. Statistical Applications in Genetics and Molecular Biology 6:37.
 
 }
 
 \author{
-  Anne-Laure Boulesteix (\url{http://www.slcmsr.net/boulesteix})
+  Anne-Laure Boulesteix (\url{http://www.ibe.med.uni-muenchen.de/organisation/mitarbeiter/020_professuren/boulesteix/index.html})
 
 }
 \seealso{\code{\link{maxsel}},\code{\link{maxsel.asymp.test}}.}
